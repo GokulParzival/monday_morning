@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'signup.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -81,18 +82,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.black, fontWeight: FontWeight.bold)),
       ),
     );
-    final loginButon1 = Material(
-      elevation: 10.0,
+    final signupButon = Material(
+      elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: Color(0xff01A0C7),
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
-        child: Text("Signup",
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()),);
+        },
+        child: Text("SignUp",
             textAlign: TextAlign.center,
             style: style.copyWith(
-                color: Colors.black, fontWeight: FontWeight.bold)),
+        color: Colors.black, fontWeight: FontWeight.bold)),
       ),
     );
     return Scaffold(
@@ -108,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
-                    "assets/logo.png",
+                    "assets/MMlogo.jpg",
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -123,9 +126,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 35.0,
                 ),
-                loginButon1,
+                signupButon,
                 SizedBox(
-                  height: 15.0,
+                  height: 35.0,
                 ),
               ],
             ),

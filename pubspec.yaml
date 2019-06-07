@@ -70,8 +70,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
-assets: MM logo.jpg
-fonts:
-- family: Montserrat
-fonts:
-- asset: fonts/Montserrat-Regular.ttf
+  assets:
+    - assets/MMlogo.jpg
+  fonts:
+     - family: Montserrat
+       fonts:
+         - asset: fonts/Montserrat-Regular.ttf
