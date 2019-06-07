@@ -3,6 +3,7 @@ class SignUpPage extends StatelessWidget {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
   Widget build(BuildContext context) {
+
     final usernameField1 = TextField(
       obscureText: false,
       style: style,
