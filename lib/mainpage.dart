@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'categoriesButton.dart';
 class MainPageFormat extends StatelessWidget {
 
   @override
@@ -9,6 +10,7 @@ class MainPageFormat extends StatelessWidget {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => catergoriesButon()),);
         },
         child: Text("Categories",
             textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold, fontFamily: 'EncodeSansCondensed-Black'),
@@ -119,99 +121,6 @@ class MainPageFormat extends StatelessWidget {
         ),
       ),
     ),
-      body:
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: new Container(
-              height: 100.0,
-              width: 400.0,
-              padding: new EdgeInsets.all(10.0),
-              decoration: new BoxDecoration(
-                border: new Border.all(
-                  color: Colors.blue, width: 5.0,
-                ),
-              ),
-              child:
-              SizedBox(
-                height: 200.0,
-                width: 300.0,
-                child: Image.asset(
-                  "assets/Articles.jpg",
-                  fit: BoxFit.fill,
-                  centerSlice: new Rect.fromLTWH(50.0, 50.0, 220.0, 90.0),
-                ),
-              ),
-            ),),
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: new Container(
-              height: 100.0,
-              width: 400.0,
-              padding: new EdgeInsets.all(10.0),
-              decoration: new BoxDecoration(
-                border: new Border.all(
-                  color: Colors.blue, width: 5.0,
-                ),
-              ),
-              child:
-              SizedBox(
-                height: 200.0,
-                width: 300.0,
-                child: Image.asset(
-                  "assets/Articles.jpg",
-                  fit: BoxFit.fill,
-                  centerSlice: new Rect.fromLTWH(50.0, 50.0, 220.0, 90.0),
-                ),
-              ),
-            ),),
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: new Container(
-              height: 100.0,
-              width: 400.0,
-              padding: new EdgeInsets.all(10.0),
-              decoration: new BoxDecoration(
-                border: new Border.all(
-                  color: Colors.blue, width: 5.0,
-                ),
-              ),
-              child:
-              SizedBox(
-                height: 200.0,
-                width: 300.0,
-                child: Image.asset(
-                  "assets/Articles.jpg",
-                  fit: BoxFit.fill,
-                  centerSlice: new Rect.fromLTWH(50.0, 50.0, 220.0, 90.0),
-                ),
-              ),
-            ),),
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: new Container(
-              height: 100.0,
-              width: 400.0,
-              padding: new EdgeInsets.all(10.0),
-              decoration: new BoxDecoration(
-                border: new Border.all(
-                  color: Colors.blue, width: 5.0,
-                ),
-              ),
-              child:
-              SizedBox(
-                height: 200.0,
-                width: 300.0,
-                child: Image.asset(
-                  "assets/Articles.jpg",
-                  fit: BoxFit.fill,
-                  centerSlice: new Rect.fromLTWH(50.0, 50.0, 220.0, 90.0),
-                ),
-              ),
-            ),),
-        ],
-    ), );
+    );
   }
 }
