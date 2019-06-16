@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'categoriesButton.dart';
+import 'InformationPage.dart';
+import 'Article.dart';
 class MainPageFormat extends StatelessWidget {
 
   @override
@@ -35,6 +37,7 @@ class MainPageFormat extends StatelessWidget {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => infoPage()),);
         },
         child: Text("Information",
           textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold, fontFamily: 'EncodeSansCondensed-Black'),
@@ -66,6 +69,19 @@ class MainPageFormat extends StatelessWidget {
         ),
       ),
     );
+    final Pollbuton = Material(
+      color: Colors.grey,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => infoPage()),);
+        },
+        child: Text("Poll",
+          textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold, fontFamily: 'EncodeSansCondensed-Black'),
+        ),
+      ),
+    );
     return Scaffold(
       appBar: PreferredSize( preferredSize: Size.fromHeight(50.0),
     child: AppBar(
@@ -74,7 +90,8 @@ class MainPageFormat extends StatelessWidget {
     ),
       ),
       drawer: Drawer(
-    child: Container(color: Colors.grey,
+    child: SingleChildScrollView(
+      child: Container(color: Colors.grey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment:  MainAxisAlignment.start,
@@ -90,7 +107,7 @@ class MainPageFormat extends StatelessWidget {
           ),
             SizedBox(
               child: Text(
-                "Hi!!", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                "Hi! Welcome to Monday Morning", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
               ),
             ),
             SizedBox(
@@ -108,19 +125,386 @@ class MainPageFormat extends StatelessWidget {
           SizedBox(
             height: 30.0,
           ),
+          Pollbuton,
+          SizedBox(
+            height: 30.0,
+          ),
           Feedback,
           SizedBox(
             height: 30.0,
           ),
           Signout5,
-          SizedBox(
-            height: 30.0,
-          ),
           ],
 
         ),
       ),
     ),
-    );
+      ),
+      body:SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5.0),
+          child: Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => articlePage()),);
+              },
+              child: Container(
+                width: 400.0,
+                height: 150.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(padding: EdgeInsets.all(5.0),
+                      child: Image.asset(
+                        "assets/Articles.jpg",
+                        height: 150.0,
+                        width: 100.0,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Heading of Article", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(5.0),
+                          child: Text(
+                            "Contents to be filled here", style: TextStyle(color: Colors.black, fontSize: 20.0),
+                          ),
+                        ),
+                      ],
+
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        new RaisedButton(
+            onPressed: null,
+          textColor: Colors.white,
+          color: Colors.blue,
+          padding: const EdgeInsets.all(20.0),
+          child: new Text("Tap to Update"),
+        ),
+      ],
+          ),),);
   }
 }
